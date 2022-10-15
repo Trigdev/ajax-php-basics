@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+         <title> Webpage Title </title>
+         <meta charset='utf-8'>
+         <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <link href="js-support/bootstrap.min.css" type="text/css" rel="stylesheet">
+         <link href="font-awesome-css/all.css" type="text/css" rel="stylesheet">
+         <link href="font-awesome-css/fontawesome.css" type="text/css" rel="stylesheet">    
+         <title> Good Template </title>
+         <style>
+         </style> 
+
+         <!-- css files -->
+    </head>
+    <body>
+        <div class="container">
+            <div id="test">
+                <p> This is the first content </p>
+            </div>
+            <button id="btn"> Click to Change</button>
+        </div>
+        <!-- js scripts -->
+        <script src="js-support/jquery-3.5.1.js"> </script>
+        <script src="js-support/popper.min.js"> </script>    
+        <script src="js-support/bootstrap.min.js"> </script>
+        <script src="js-support/util.js"> </script>
+        <script src="js-support/modal.js"> </script>
+        <script src="js-support/collapse.js"> </script>
+        <script src="js-support/tooltip.js"> </script>
+        <script src="js-support/popover.js"> </script>
+        <script src="js-support/modal-support.js"> </script>
+        <script src="font-awesome-js/all.js"> </script>
+        <script src="font-awesome-js/fontawesome.js"> </script>  
+        <script>
+        console.log('it is working!');
+        </script> 
+        <script>
+            $(document).ready(function()
+            {
+                $("#btn").click(function()
+                {
+                    $('#test').load("data.txt",
+                    {
+                        Name: "Ahor",
+                        Email: "ahorisaac.ai@gmail.com"
+                    },
+                    function()
+                    {
+                        alert("Hi There!");
+                    });
+                })
+            })
+        </script>
+    </body>
+</html>
