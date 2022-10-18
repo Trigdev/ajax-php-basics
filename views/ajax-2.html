@@ -16,41 +16,35 @@
     />
   </head>
   <body>
-    <div class="container">
-      <!-- <button> Click me to get data! </button> -->
+    <div class="container my-3">
+      <button class="btn btn-outline-secondary">Click me to get data!</button>
       <input type="text" name="name" class="form-control" />
-      <p id="test"></p>
+      <div id="test" class="lead my-2"></div>
     </div>
     <!-- js scripts -->
     <script src="../public/js/jquery-3.5.1.js"></script>
     <script src="../public/js/popper.min.js"></script>
     <script src="../public/js/bootstrap.min.js"></script>
     <script>
-      /* $(document).ready(function()
-        {
-            $("button").click(function() 
-            {
-                $.get("test.txt", function(data, status)
-                {
-                    $("#test").html(data);
-                    alert(status);
-                })
-            }
-            );
-        });
-        */
-      $(document).ready(function () {
-        $("input").keyup(function () {
+      $(document).ready(() => {
+        $("input").keyup(() => {
           let name = $("input").val();
           $.post(
             "suggestions.php",
             {
               suggestion: name,
             },
-            function (data, status) {
+            (data, status) => {
               $("#test").html(data);
             }
           );
+        });
+
+        $("button").click(() => {
+          $.get("test.txt", (data, status) => {
+            $("#test").html(data);
+            alert(status);
+          });
         });
       });
     </script>

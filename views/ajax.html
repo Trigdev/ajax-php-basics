@@ -17,11 +17,11 @@
     <style></style>
   </head>
   <body>
-    <div class="container">
-      <div id="test">
-        <p>This is the first content</p>
+    <div class="container my-3">
+      <div id="test" class="jumbotron">
+        <p class="lead">This is the first content</p>
       </div>
-      <button id="btn">Click to Change</button>
+      <button class="btn btn-primary btn-md" id="btn">Click to Change</button>
     </div>
     <!-- js scripts -->
     <script src="../public/js/jquery-3.5.1.js"></script>
@@ -31,16 +31,16 @@
       console.log("it is working!");
     </script>
     <script>
-      $(document).ready(function () {
-        $("#btn").click(function () {
+      $(document).ready(() => {
+        $("#btn").click(() => {
           $("#test").load(
             "data.txt",
             {
               Name: "Ahor",
               Email: "ahorisaac.ai@gmail.com",
             },
-            function () {
-              alert("Hi There!");
+            () => {
+              alert("success");
             }
           );
         });

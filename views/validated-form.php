@@ -20,7 +20,7 @@
     <div class="container">
         <div class="container jumbotron mt-3 bg-white shadow-lg" style="border: 1px solid lightgreen;">
             <div class="row justify-content-center">
-                <div class="col-md-4 col-lg-4">
+                <div class="col-md-6 col-lg-6">
                     <form action="mail.php" method="POST">
                         <div class="form-group">
                             <input id="mail-name" type="text" name="name" placeholder="Input your name" class="form-control mt-2 mb-2" />
@@ -35,7 +35,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea id="mail-message" name="message" placeholder="Message" class="form-control"></textarea>
+                            <textarea id="mail-message" name="message" placeholder="Message" class="form-control" cols="5" rows="8"></textarea>
                         </div>
                         <div class="form-group">
                             <button id="mail-submit" type="submit" name="submit" class="btn btn-outline-success">
