@@ -1,7 +1,6 @@
-<?php 
+<?php
 
-if(isset($_POST["submit"]))
-{
+if (isset($_POST["submit"])) {
     $name = $_POST["name"];
     $email = $_POST["email"];
     $gender = $_POST["gender"];
@@ -10,23 +9,16 @@ if(isset($_POST["submit"]))
     $errorEmpty = false;
     $errorEmail = false;
 
-    if(empty($name) || empty($email) || empty($mesage))
-    {
+    if (empty($name) || empty($email) || empty($mesage)) {
         echo "<span class='text-danger'> Fill in all fields </span>";
         $errorEmpty = true;
-    }
-    elseif(!filter_var($email, FILTER_VALIDATE_EMAIL))
-    {
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "<span class='text-danger'>Write a valid e-mail address! </span>";
         $errorEmail = true;
-    }
-    else 
-    {
+    } else {
         echo "<span class='text-success'>Fill in all fields </span>";
     }
-}
-else 
-{
+} else {
     echo "There was an error!";
 }
 
@@ -37,17 +29,14 @@ else
     var errorEmpty = "<?php echo $errorEmpty; ?>";
     var errorEmail = "<?php echo $errorEmail; ?>";
 
-    if(errorEmpty === true)
-    {
+    if (errorEmpty === true) {
         $("#mail-name, #mail-email, #mail-message").addClass('input-error');
-    }  
-    if(errorEmail === true)
-    {
+    }
+    if (errorEmail === true) {
         $("#mail-email").addClass('input-error');
     }
 
-    if(errorEmpty == false && errorEmail == false)
-    {
+    if (errorEmpty == false && errorEmail == false) {
         $("#mail-name, #mail-email, #mail-message").val("");
     }
 </script>

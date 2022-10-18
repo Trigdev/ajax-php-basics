@@ -1,4 +1,4 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "ajax");
+$conn = mysqli_connect("localhost", "root", "", "ajax_basics");
 
 ?>
